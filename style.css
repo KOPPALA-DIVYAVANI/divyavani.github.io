@@ -1,0 +1,131 @@
+/* General body style with subtle tech background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fdfbfb;
+    color: #111;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+/* Add subtle tech animation background using pseudo element */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/tech-bg.png'); /* add your tech background image or SVG */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.05; /* very subtle */
+    z-index: -1;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #005f7f;
+}
+
+/* Sections */
+section {
+    padding: 100px 20px 50px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+/* Fade-in animation for sections */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+    margin-bottom: 20px;
+}
+
+/* Headings */
+h1 {
+    color: #00aaff;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #00aaff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,170,255,0.3);
+}
+
+.btn:hover {
+    background-color: #005f7f;
+    transform: translateY(-2px);
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill {
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0,170,255,0.3);
+}
+
+.skill:hover {
+    background-color: #005f7f;
+    cursor: pointer;
+}
